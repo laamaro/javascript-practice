@@ -1,14 +1,11 @@
-// Values and Variables:
-let country = 'Brasil';
-let continent = 'South America';
+// Values and Variables
+const country = 'Brasil';
+const continent = 'South America';
 let population = 200000000;
-console.log(country);
-console.log(continent);
-console.log(population);
 
-// Data Type:
-let isIsland = false;
-let language;
+// Data Type
+const isIsland = false;
+const language = 'Portuguese';
 console.log(typeof isIsland);
 console.log(typeof population);
 console.log(typeof country);
