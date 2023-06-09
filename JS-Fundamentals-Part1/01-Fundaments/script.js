@@ -16,5 +16,9 @@ let populationFinland = 6000000;
 console.log(populationBr > populationFinland);
 const avgPopulation = 33000000;
 console.log(populationBr < avgPopulation);
-const description = country + " is in " + continent + ", and its " + populationBr + " people that speak " + language;
+let description = country + " is in " + continent + ", and its " + populationBr + " people that speak " + language;
+console.log(description);
+
+// Strings and Template Literals
+description = `${country} is in ${continent}, and its ${populationBr} people that speak ${language}!`;
 console.log(description);
