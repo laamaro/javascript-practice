@@ -10,14 +10,11 @@ console.log(typeof isIsland, typeof populationBr, typeof country, typeof languag
 
 // Basic Operators
 let halfPopulation = populationBr / 2;
-console.log(halfPopulation);
-console.log(populationBr++);
+console.log(halfPopulation, populationBr++);
 let populationFinland = 60;
 console.log(populationBr > populationFinland);
 const avgPopulation = 33;
 console.log(populationBr < avgPopulation);
-let description = country + " is in " + continent + ", and its " + populationBr + " million people that speak " + language;
-console.log(description);
 
 // Strings and Template Literals
 description = `${country} is in ${continent}, and its ${populationBr} people that speak ${language}!`;
@@ -28,4 +25,15 @@ if (populationBr > avgPopulation) {
   console.log(`${country}'s population is above avarage!`);
 } else {
   console.log(`${country}'s population is ${avgPopulation - populationBr} million bellow the avarage...`);
+}
+
+// Equality Operators: == vs. ===
+const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+
+if (numNeighbours === 1) {
+  console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+  console.log('More than 1 border!');
+} else {
+  console.log('No borders!');
 }
