@@ -28,12 +28,18 @@ if (populationBr > avgPopulation) {
 }
 
 // Equality Operators: == vs. ===
-const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+// const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+// if (numNeighbours === 1) {
+//   console.log('Only 1 border!');
+// } else if (numNeighbours > 1) {
+//   console.log('More than 1 border!');
+// } else {
+//   console.log('No borders!');
+// }
 
-if (numNeighbours === 1) {
-  console.log('Only 1 border!');
-} else if (numNeighbours > 1) {
-  console.log('More than 1 border!');
+// Logical Operators
+if (populationBr > 50 && language === 'English' && !isIsland) {
+  console.log('Sara should live in Brasil!');
 } else {
-  console.log('No borders!');
+  console.log('Brasil is not the right country for Sara :(');
 }
