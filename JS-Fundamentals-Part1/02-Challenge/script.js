@@ -21,11 +21,11 @@ Test data:
 const scoreDolphins = (97 + 112 + 101) / 3
 const scoreKoalas = (109 + 95 + 106) / 3
 
-if (scoreDolphins > scoreKoalas && scoreDolphins > 100) {
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
   console.log('Dolphins win the trophy');
-} else if (scoreDolphins < scoreKoalas && scoreKoalas > 100) {
+} else if (scoreDolphins < scoreKoalas && scoreKoalas >= 100) {
   console.log('Koalas win the trophy');
-} else if (scoreDolphins === scoreKoalas && scoreDolphins > 100) {
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100) {
   console.log(`Both win the trophy`);
 } else {
   console.log('No tem wins the trophy');
