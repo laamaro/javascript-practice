@@ -43,3 +43,25 @@ if (populationBr > 50 && language === 'English' && !isIsland) {
 } else {
   console.log('Brasil is not the right country for Sara :(');
 }
+
+// Switch Statement
+switch(language) {
+  case 'chinese':
+  case 'mandarim':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;
+  default:
+    console.log( 'Great language too :D');
+}
