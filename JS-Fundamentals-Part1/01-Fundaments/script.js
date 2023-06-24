@@ -45,7 +45,7 @@ if (populationBr > 50 && language === 'English' && !isIsland) {
 }
 
 // Switch Statement
-switch(language) {
+switch (language) {
   case 'chinese':
   case 'mandarim':
     console.log('MOST number of native speakers!');
@@ -65,3 +65,7 @@ switch(language) {
   default:
     console.log( 'Great language too :D');
 }
+
+// Ternary
+const avg = populationBr > 33 ? 'above' : 'below'
+console.log(`Brasil's population is ${avg} avarage.`);
