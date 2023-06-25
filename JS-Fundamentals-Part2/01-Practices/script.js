@@ -24,3 +24,10 @@ console.log(percentageOfWorld2(1441));
 // Arrow
 const percentageOfWorld3 = population => population / 7900;
 console.log(percentageOfWorld3(32));
+
+// Functions Calling Other Functions
+const describePopulation = (country, population) => {
+  const percentage = percentageOfWorld1(population);
+  return `${country} has ${population} million people, which is about ${percentage}% of the world.`
+}
+console.log(describePopulation('Brazil', 214));
