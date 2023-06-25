@@ -12,7 +12,6 @@ function percentageOfWorld1(population) {
   const percentage = (population / 7900) * 100
   return percentage;
 }
-
 console.log(percentageOfWorld1(214));
 
 // Expression
@@ -20,5 +19,8 @@ const percentageOfWorld2 = function (population) {
   const percentage = (population / 7900) * 100
   return percentage;
 }
-
 console.log(percentageOfWorld2(1441));
+
+// Arrow
+const percentageOfWorld3 = population => population / 7900;
+console.log(percentageOfWorld3(32));
