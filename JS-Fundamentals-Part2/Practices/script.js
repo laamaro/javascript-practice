@@ -37,3 +37,13 @@ const populations = [214, 125, 1441, 47]
 console.log(populations.length === 4);
 const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
 console.log(percentages);
+
+// Basic Array Methods
+const neighbours = ['Uruguai', 'Argentina', 'Paraguai', 'Bolivia', 'Peru', 'Colômbia', 'Venezuela'];
+neighbours.push('Utopia');
+neighbours.pop();
+if (!neighbours.includes('Germany')) {
+  console.log('Probably not a Central European country :D');
+}
+neighbours[neighbours.indexOf('Uruguai')] = 'Republica do Uruguai';
+console.log(neighbours);
