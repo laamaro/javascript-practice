@@ -48,14 +48,16 @@ if (!neighbours.includes('Germany')) {
 neighbours[neighbours.indexOf('Uruguai')] = 'Republica do Uruguai';
 console.log(neighbours);
 
-// Introduction to Objects
+// Introduction to Objects / Dot vs. Bracket Notation / Object Methods
 const myCountry = {
   country: 'Brazil',
   capital: 'Brasilia',
   language: 'Portuguese',
   population: 214,
-  neighbours: ['Uruguai', 'Argentina', 'Paraguai', 'Bolivia', 'Peru', 'Colômbia', 'Venezuela']
-};
+  neighbours: ['Uruguai', 'Argentina', 'Paraguai', 'Bolivia', 'Peru', 'Colômbia', 'Venezuela'],
 
-// Dot vs. Bracket Notation
-console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
+  describe: function() {
+    return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`;
+  }
+};
+console.log(myCountry.describe);
