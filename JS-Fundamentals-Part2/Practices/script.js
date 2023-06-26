@@ -62,9 +62,9 @@ const myCountry = {
 console.log(myCountry.describe);
 
 // The for loop
-for(let vote = 1; vote <= 50; vote++) {
-  console.log(`Voter number ${vote} is currently voting.`);
-}
+// for(let vote = 1; vote <= 50; vote++) {
+//   console.log(`Voter number ${vote} is currently voting.`);
+// }
 
 // Looping Arrays, Breaking and Continuing
 // remembering populations = [214, 125, 1441, 47]
@@ -73,5 +73,16 @@ const percentages2 = [];
 for(let i = 0; i < populations.length; i++) {
   percentages2.push(percentageOfWorld1(populations[i]));
 }
-
 console.log(percentages2);
+
+// Looping Backwards and Loops in Loops
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
+'Russia']];
+
+for(let arr = 0; arr < listOfNeighbours.length; arr++) {
+
+  for(let i = 0; i < listOfNeighbours[arr].length; i++) {
+    console.log(`Neighbour: ${listOfNeighbours[arr][i]}`);
+  }
+  
+}
