@@ -3,7 +3,6 @@ function describeCountry(country, population, capitalCity) {
   const description = `${country} has ${population} million people and its capital city is ${capitalCity}.`
   return description;
 }
-
 console.log(describeCountry('Brazil', 214, 'Brasília'));
 
 // Function Declarations vs. Expressions
@@ -61,3 +60,8 @@ const myCountry = {
   }
 };
 console.log(myCountry.describe);
+
+// The for loop
+for(let vote = 1; vote <= 50; vote++) {
+  console.log(`Voter number ${vote} is currently voting.`);
+}
