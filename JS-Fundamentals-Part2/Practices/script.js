@@ -47,3 +47,12 @@ if (!neighbours.includes('Germany')) {
 }
 neighbours[neighbours.indexOf('Uruguai')] = 'Republica do Uruguai';
 console.log(neighbours);
+
+// Introduction to Objects
+const myCountry = {
+  country: 'Brazil',
+  capital: 'Brasilia',
+  language: 'POrtuguese',
+  population: 214,
+  neighbours: ['Uruguai', 'Argentina', 'Paraguai', 'Bolivia', 'Peru', 'Colômbia', 'Venezuela']
+};
