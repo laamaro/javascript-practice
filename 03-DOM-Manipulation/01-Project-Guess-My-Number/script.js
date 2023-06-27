@@ -1,8 +1,9 @@
 'use strict';
 
-document.querySelector('.message').textContent = 'Correct Number! 🎉';
+document.querySelector('.check').addEventListener('click', () => {
+  const guess = Number(document.querySelector('.guess').value);
 
-document.querySelector('.number').textContent = 15;
-document.querySelector('.score').textContent = 20;
-
-document.querySelector('.guess').value;
+  if (!guess) {
+    document.querySelector('.message').textContent = "No number inputed 😢 Try Again!"
+  }
+})
