@@ -84,5 +84,15 @@ for(let arr = 0; arr < listOfNeighbours.length; arr++) {
   for(let i = 0; i < listOfNeighbours[arr].length; i++) {
     console.log(`Neighbour: ${listOfNeighbours[arr][i]}`);
   }
-  
+
 }
+
+// The while Loop
+const percentages3 = [];
+let i = 0
+while (i < populations.length) {
+  percentages3.push(percentageOfWorld1(populations[i]));
+
+  i++;
+}
+console.log(percentages3);
