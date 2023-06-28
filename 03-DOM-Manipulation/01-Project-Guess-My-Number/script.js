@@ -9,5 +9,7 @@ document.querySelector('.check').addEventListener('click', () => {
 
   if (!guess) {
     document.querySelector('.message').textContent = "No number inputed 😢 Try Again!"
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = "Correct Number!! 🎉"
   }
 })
