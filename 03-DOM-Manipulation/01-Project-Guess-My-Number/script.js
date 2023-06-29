@@ -8,8 +8,12 @@ document.querySelector('.check').addEventListener('click', () => {
   const guess = Number(document.querySelector('.guess').value);
 
   if (!guess) {
-    document.querySelector('.message').textContent = "No number inputed 😢 Try Again!"
+    document.querySelector('.message').textContent = "No number inputed 😢 Try Again!";
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = "Correct Number!! 🎉"
+    document.querySelector('.message').textContent = "Correct Number!! 🎉";
+  } else if (guess > secretNumber) {
+    document.querySelector('.message').textContent = "Guess is too high!!";
+  } else if (guess < secretNumber) {
+    document.querySelector('.message').textContent = "Guess is too low!!;"
   }
 })
