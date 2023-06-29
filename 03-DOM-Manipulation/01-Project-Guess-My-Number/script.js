@@ -36,3 +36,14 @@ document.querySelector('.check').addEventListener('click', () => {
     }
   }
 })
+
+// When player clicks on 'again' button
+document.querySelector('.again').addEventListener('click', () => {
+  // secretNumber = secretNumber;
+  document.querySelector('.guess').value = '';
+  document.querySelector('.score').textContent = 20;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.message').textContent = "Start guessing...";
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+})
