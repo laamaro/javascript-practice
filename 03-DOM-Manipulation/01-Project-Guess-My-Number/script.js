@@ -21,23 +21,13 @@ document.querySelector('.check').addEventListener('click', () => {
       document.querySelector('.highscore').textContent = highscore;
     }
 
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = "Guess is too high!!";
+      document.querySelector('.message').textContent = guess > secretNumber ? "Guess is too high!!" : "Guess is too low!!";
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = "You lost the game 😢"
-      document.querySelector('.score').textContent = 0;
-    }
-
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = "Guess is too low!!;"
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = "You lost the game 😢"
+      document.querySelector('.message').textContent = "You lost the game 😢";
       document.querySelector('.score').textContent = 0;
     }
   }
