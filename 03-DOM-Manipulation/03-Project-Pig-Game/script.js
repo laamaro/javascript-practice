@@ -12,3 +12,15 @@ const dice = document.querySelector('.dice');
 score0El.textContent = 0;
 score1El.textContent = 0;
 dice.classList.add('hidden');
+
+// Rolling the dice
+rollDice.addEventListener('click', () => {
+  // Generate random dice roll
+  const diceNumber = Math.trunc(Math.random() * 6) + 1;
+
+  // Display the dice
+  dice.classList.remove('hidden');
+  dice.src = `dice-${diceNumber}.png`;
+
+  // Check for value 1: switch player
+})
