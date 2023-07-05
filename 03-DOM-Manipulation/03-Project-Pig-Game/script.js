@@ -10,7 +10,9 @@ const rollDice = document.querySelector('.btn--roll');
 const hold = document.querySelector('.btn--hold');
 const dice = document.querySelector('.dice');
 
-let currentScore = 0
+const scores = [0, 0];
+let currentScore = 0;
+let activePLayer = 0;
 
 // Starting the game
 score0El.textContent = 0;
@@ -29,10 +31,11 @@ rollDice.addEventListener('click', () => {
   if (diceNumber !== 1) {
     // Add number to current score
     currentScore += diceNumber;
-    current0.textContent = currentScore; // This will be changed
-
+    document.getElementById(`current--${activePLayer}`).textContent = currentScore;
   } else {
     // Switch player
-
+    document.getElementById(`current--${activePLayer}`).textContent = 0;
+    activePLayer = activePLayer === 0 ? 1 : 0;
+    currentScore = 0;
   }
 })
