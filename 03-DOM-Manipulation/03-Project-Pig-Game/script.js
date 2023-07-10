@@ -15,6 +15,7 @@ const player1El = document.querySelector('.player--1');
 const scores = [0, 0];
 let currentScore = 0;
 let activePLayer = 0;
+let playing = true;
 
 // Starting the game
 score0El.textContent = 0;
@@ -31,32 +32,40 @@ const switchPlayer = function () {
 
 // Rolling the dice
 rollDice.addEventListener('click', () => {
-  // Generate random dice roll
-  const diceNumber = Math.trunc(Math.random() * 6) + 1;
+  if (playing) {
+    // Generate random dice roll
+    const diceNumber = Math.trunc(Math.random() * 6) + 1;
 
-  // Display the dice
-  dice.classList.remove('hidden');
-  dice.src = `dice-${diceNumber}.png`;
+    // Display the dice
+    dice.classList.remove('hidden');
+    dice.src = `dice-${diceNumber}.png`;
 
-  if (diceNumber !== 1) {
-    // Add number to current score
-    currentScore += diceNumber;
-    document.getElementById(`current--${activePLayer}`).textContent = currentScore;
-  } else {
-    // Switch player
-    switchPlayer();
+    if (diceNumber !== 1) {
+      // Add number to current score
+      playing = false;
+      currentScore += diceNumber;
+      document.getElementById(`current--${activePLayer}`).textContent = currentScore;
+    } else {
+      // Switch player
+      switchPlayer();
+    }
   }
 })
 
 hold.addEventListener('click', function () {
-  // Add current score to active player score
-  scores[activePLayer] += currentScore;
-  document.getElementById(`score--${activePLayer}`).textContent = scores[activePLayer];
+  if (playing) {
+    // Add current score to active player score
+    scores[activePLayer] += currentScore;
+    document.getElementById(`score--${activePLayer}`).textContent = scores[activePLayer];
 
-  // CHeck if player's score is >= 100
-
-  // finish game if it is
-
-  // switch player if it isn't;
-  switchPlayer();
+    // CHeck if player's score is >= 100
+    if (scores[activePLayer] >= 100) {
+      // finish game if it is
+      document.querySelector(`.player--${activePLayer}`).classList.add('player--winner');
+      document.querySelector(`.player--${activePLayer}`).classList.remove('player--active');
+    } else {
+      // switch player if it isn't;
+      switchPlayer();
+    }
+  }
 })
