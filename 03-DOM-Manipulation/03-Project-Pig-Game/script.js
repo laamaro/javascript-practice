@@ -42,7 +42,6 @@ rollDice.addEventListener('click', () => {
 
     if (diceNumber !== 1) {
       // Add number to current score
-      playing = false;
       currentScore += diceNumber;
       document.getElementById(`current--${activePLayer}`).textContent = currentScore;
     } else {
@@ -60,6 +59,8 @@ hold.addEventListener('click', function () {
 
     // CHeck if player's score is >= 100
     if (scores[activePLayer] >= 100) {
+      playing = false;
+      dice.classList.add('hidden');
       // finish game if it is
       document.querySelector(`.player--${activePLayer}`).classList.add('player--winner');
       document.querySelector(`.player--${activePLayer}`).classList.remove('player--active');
