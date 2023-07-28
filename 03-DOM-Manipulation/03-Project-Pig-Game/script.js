@@ -12,15 +12,27 @@ const dice = document.querySelector('.dice');
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePLayer = 0;
-let playing = true;
+let scores, currentScore, activePLayer, playing;
 
-// Starting the game
-score0El.textContent = 0;
-score1El.textContent = 0;
-dice.classList.add('hidden');
+const init = function () {
+  scores = [0, 0];
+  currentScore = 0;
+  activePLayer = 0;
+  playing = true;
+
+  current0.textContent = 0;
+  current1.textContent = 0;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  dice.classList.add('hidden');
+
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player1El.classList.remove('player--active');
+  player0El.classList.add('player--active');
+};
+
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePLayer}`).textContent = 0;
@@ -70,3 +82,6 @@ hold.addEventListener('click', function () {
     }
   }
 })
+
+// Reseting the game
+newGame.addEventListener('click', init);
